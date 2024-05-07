@@ -3,6 +3,8 @@
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7789.h>
+#include "Font5x7Fixed.h"
+#include "Font5x7FixedMono.h"
 
 #define PIN_CS 10
 #define PIN_DC 9

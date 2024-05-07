@@ -5,16 +5,20 @@ SCREEN::SCREEN() {
 }
 
 void SCREEN::init() {
+	_tft->setFont(&Font5x7Fixed);
     _tft->init(WIDTH, HEIGHT, SPI_MODE0);
     _tft->invertDisplay(false);
     _tft->setRotation(ROTATION);
     _tft->fillScreen(ST77XX_BLACK);
 
-    _tft->setCursor(0, 0);
+    _tft->setTextSize(3);
+    _tft->setCursor(0, 3 * 8);
     _tft->setTextColor(ST77XX_WHITE);
     _tft->setTextWrap(true);
-    _tft->setTextSize(2);
-    _tft->print("Initialized!");
+    _tft->println("Initialized!");
+    _tft->println("Initialized!");
+    _tft->println("$ % ^ & * - + = _ |");
+    _tft->println("( ) { } [ ] < > # ~");
 }
 
 void SCREEN::clear() {
