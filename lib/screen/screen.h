@@ -14,9 +14,12 @@
 
 class SCREEN {
     private:
-        Adafruit_ST7789 *tft;
+        Adafruit_ST7789 *_tft;
     public:
         SCREEN();
         void init();
+        void clear();
+        void showInverterValues(float voltage, float current, float power, float energy, float frequency, float pf);
+        Adafruit_ST7789* getTFT();
 };
 #endif
