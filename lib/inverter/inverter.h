@@ -4,8 +4,8 @@
 #include <PZEM004Tv30.h>
 #include <SoftwareSerial.h>
 
-#define PIN_RX 5
-#define PIN_TX 6
+#define PIN_RX 6
+#define PIN_TX 5
 
 #define CURRENT_WIND_COUNT 2
 
