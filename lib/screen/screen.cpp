@@ -11,14 +11,11 @@ void SCREEN::init() {
     _tft->setRotation(ROTATION);
     _tft->fillScreen(ST77XX_BLACK);
 
-    _tft->setTextSize(3);
-    _tft->setCursor(0, 3 * 8);
+    _tft->setTextSize(2);
+    _tft->setCursor(0, 2 * 8);
     _tft->setTextColor(ST77XX_WHITE);
     _tft->setTextWrap(true);
     _tft->println("Initialized!");
-    _tft->println("Initialized!");
-    _tft->println("$ % ^ & * - + = _ |");
-    _tft->println("( ) { } [ ] < > # ~");
 }
 
 void SCREEN::clear() {
@@ -30,7 +27,8 @@ Adafruit_ST7789* SCREEN::getTFT() {
 }
 
 void SCREEN::showInverterValues(float voltage, float current, float power, float energy, float frequency, float pf) {
-    _tft->setCursor(0, 16);
+    _tft->setCursor(0, 2 * 8);
+	_tft->setFont(&Font5x7FixedMono);
     _tft->setTextColor(ST77XX_WHITE, ST77XX_BLACK);
     _tft->print("Voltage:      ");
     _tft->print(voltage);
